@@ -1,3 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jual HP ke Gua</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: #0f0f0f;
+      color: white;
+      text-align: center;
+      padding: 30px;
+    }
+
+    h1 {
+      font-size: 26px;
+    }
+
+    p {
+      color: #aaa;
+    }
+
+    .btn {
+      background: #25D366;
+      padding: 15px;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+      width: 90%;
+      max-width: 300px;
+    }
+
+    .card {
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 15px;
+      margin-top: 30px;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    input, textarea {
+      width: 90%;
+      padding: 10px;
+      margin: 8px;
+      border-radius: 8px;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Jual HP Bekas Lu ke Gua 🔥</h1>
+<p>Proses cepat • Harga santai • Bisa COD</p>
+
+<button class="btn" onclick="wa()">Chat WhatsApp</button>
+
+<div class="card">
+  <h3>Isi Data HP</h3>
+  <input id="nama" placeholder="Nama">
+  <input id="hp" placeholder="Tipe HP">
+  <input id="kondisi" placeholder="Kondisi">
+  <input id="harga" placeholder="Harga">
+  <textarea id="ket" placeholder="Keterangan"></textarea>
+  <button class="btn" onclick="kirim()">Kirim ke WhatsApp</button>
+</div>
+
 <script>
 function wa() {
   window.location.href = "https://api.whatsapp.com/send?phone=6283805811175";
@@ -10,15 +82,18 @@ function kirim() {
   var harga = document.getElementById("harga").value;
   var ket = document.getElementById("ket").value;
 
-  var text = "Halo saya mau jual HP - " +
+  var text = "Halo, saya mau jual HP - " +
              nama + " | " +
              hp + " | " +
              kondisi + " | " +
              harga + " | " +
              ket;
 
-  var url = "https://api.whatsapp.com/send?phone=6283805811175&text=" + encodeURIComponent(text);
+  var link = "https://api.whatsapp.com/send?phone=6283805811175&text=" + encodeURIComponent(text);
 
-  window.location.href = url;
+  window.location.href = link;
 }
 </script>
+
+</body>
+</html>

@@ -1,24 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>HPDIA - Jual Beli HP</title>
+  <title>HPDIA - Trusted Phone Buyer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     body {
       margin: 0;
       font-family: Arial;
-      background: linear-gradient(180deg, #0f172a, #1e293b);
+      background: #0f172a;
       color: white;
     }
 
     .container {
-      padding: 20px;
+      max-width: 500px;
+      margin: auto;
+      padding: 25px;
       text-align: center;
     }
 
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+      color: #22c55e;
+    }
+
+    .tagline {
+      font-size: 12px;
+      color: #94a3b8;
+      margin-bottom: 20px;
+    }
+
     h1 {
-      font-size: 28px;
+      font-size: 26px;
+      margin-bottom: 10px;
     }
 
     .sub {
@@ -27,50 +42,36 @@
     }
 
     .btn {
-      background: #22c55e;
-      padding: 15px;
+      padding: 14px;
       border: none;
-      border-radius: 12px;
-      color: white;
-      font-size: 16px;
+      border-radius: 10px;
+      font-size: 15px;
       cursor: pointer;
       width: 100%;
-      max-width: 320px;
       margin-top: 10px;
+    }
+
+    .wa { background: #22c55e; }
+    .ig { background: #e1306c; }
+
+    .section {
+      margin-top: 40px;
+      text-align: left;
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 15px;
+      font-size: 18px;
     }
 
     .card {
       background: #1e293b;
-      padding: 20px;
-      border-radius: 15px;
-      margin-top: 25px;
-      max-width: 400px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 12px;
-      margin: 8px 0;
-      border-radius: 10px;
-      border: none;
-      background: #334155;
-      color: white;
-    }
-
-    .price-box {
-      background: #1e293b;
       padding: 15px;
-      border-radius: 12px;
-      margin: 10px auto;
-      max-width: 320px;
-      text-align: left;
+      border-radius: 10px;
+      margin-bottom: 10px;
     }
 
-    .section {
-      margin-top: 40px;
-    }
   </style>
 </head>
 
@@ -78,39 +79,37 @@
 
 <div class="container">
 
-  <h1>HPDIA 🔥</h1>
-  <p class="sub">Beli & Terima Jual HP Bekas</p>
+  <!-- BRAND -->
+  <div class="logo">HPDIA</div>
+  <div class="tagline">Trusted Phone Buyer</div>
 
-  <button class="btn" onclick="wa()">💬 Chat WhatsApp</button>
+  <!-- HERO -->
+  <h1>Jual HP Anda dengan Aman & Cepat</h1>
+  <p class="sub">Proses instan • Harga kompetitif • Bisa COD</p>
 
-  <!-- PRICE LIST -->
+  <button class="btn wa" onclick="wa()">💬 Jual HP Sekarang</button>
+  <button class="btn ig" onclick="ig()">📲 Lihat Testimoni Instagram</button>
+
+  <!-- CARA KERJA -->
   <div class="section">
-    <h3>💰 Estimasi Harga Beli</h3>
-
-    <div class="price-box">iPhone 11 → 3jt - 5jt</div>
-    <div class="price-box">iPhone 12 → 5jt - 7jt</div>
-    <div class="price-box">Samsung S21 → 4jt - 6jt</div>
-    <div class="price-box">Xiaomi → 1jt - 3jt</div>
-
+    <div class="title">Cara Kerja</div>
+    <div class="card">1. Kirim data HP</div>
+    <div class="card">2. Dapat estimasi harga</div>
+    <div class="card">3. Transaksi cepat</div>
   </div>
 
-  <!-- FORM -->
-  <div class="card">
-    <h3>Jual HP ke Gua</h3>
-    <input id="nama" placeholder="Nama">
-    <input id="hp" placeholder="Tipe HP">
-    <input id="kondisi" placeholder="Kondisi">
-    <input id="harga" placeholder="Harga diinginkan">
-    <textarea id="ket" placeholder="Keterangan"></textarea>
-    <button class="btn" onclick="kirim()">🚀 Kirim ke WhatsApp</button>
+  <!-- PRICE -->
+  <div class="section">
+    <div class="title">Estimasi Harga</div>
+    <div class="card">iPhone 11 → 3jt - 5jt</div>
+    <div class="card">iPhone 12 → 5jt - 7jt</div>
+    <div class="card">Samsung → 2jt - 6jt</div>
   </div>
 
-  <!-- KELEBIHAN -->
-  <div class="section">
-    <h3>Kenapa pilih HPDIA?</h3>
-    <p>⚡ Proses cepat</p>
-    <p>💰 Harga nego santai</p>
-    <p>🔒 Aman & terpercaya</p>
+  <!-- CTA -->
+  <div class="section" style="text-align:center;">
+    <div class="title">Siap menjual HP Anda?</div>
+    <button class="btn wa" onclick="wa()">🚀 Mulai Sekarang</button>
   </div>
 
 </div>
@@ -120,18 +119,8 @@ function wa() {
   window.location.href = "https://api.whatsapp.com/send?phone=6283805811175";
 }
 
-function kirim() {
-  var nama = document.getElementById("nama").value;
-  var hp = document.getElementById("hp").value;
-  var kondisi = document.getElementById("kondisi").value;
-  var harga = document.getElementById("harga").value;
-  var ket = document.getElementById("ket").value;
-
-  var text = "Jual HP - " + nama + " | " + hp + " | " + kondisi + " | " + harga + " | " + ket;
-
-  var link = "https://api.whatsapp.com/send?phone=6283805811175&text=" + encodeURIComponent(text);
-
-  window.location.href = link;
+function ig() {
+  window.location.href = "https://instagram.com/USERNAME_LU";
 }
 </script>
 

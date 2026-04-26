@@ -42,6 +42,7 @@
     .sub {
       margin-bottom: 25px;
       line-height: 1.6;
+      opacity: 0.9;
     }
 
     .btn {
@@ -54,11 +55,10 @@
       font-size: 15px;
     }
 
-    /* WA CLEAN STYLE */
     .wa {
       background: rgba(255,255,255,0.1);
-      color: white;
       border: 1px solid rgba(255,255,255,0.2);
+      color: white;
     }
 
     .wa i {
@@ -124,7 +124,6 @@
       opacity: 0.8;
     }
 
-    /* FLOATING ICON ONLY */
     .floating {
       position: fixed;
       bottom: 20px;
@@ -136,7 +135,6 @@
       cursor: pointer;
       box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     }
-
   </style>
 </head>
 
@@ -153,7 +151,7 @@
   Solusi cepat dan aman untuk menjual HP Anda dengan harga kompetitif dan proses tanpa ribet
   </p>
 
-  <!-- WA BUTTON CLEAN -->
+  <!-- CTA UTAMA -->
   <button class="btn wa" onclick="wa()">
     <i class="fa-brands fa-whatsapp"></i> Jual HP Sekarang
   </button>
@@ -162,13 +160,75 @@
     <i class="fa-brands fa-instagram"></i> @hpdia
   </button>
 
-  <!-- KENAPA -->
+  <!-- ESTIMASI -->
   <div class="section">
-    <div class="title">Kenapa HPDIA?</div>
-    <div class="card">Proses cepat dan bisa cair di hari yang sama</div>
-    <div class="card">Harga kompetitif dan masih bisa nego</div>
-    <div class="card">Transaksi aman dan bisa COD</div>
-    <div class="card">Tersedia layanan penjemputan unit</div>
+    <div class="title">Estimasi Harga</div>
+
+    <!-- OPPO -->
+    <div class="card dropdown" onclick="toggle(this)">
+      <div class="brand">
+        <img src="https://cdn.simpleicons.org/oppo/ffffff"> OPPO
+      </div>
+      <span>+</span>
+    </div>
+    <div class="dropdown-content">
+      <div class="card">Reno → 4jt - 9jt</div>
+      <div class="card">A Series → 1jt - 4jt</div>
+    </div>
+
+    <!-- SAMSUNG -->
+    <div class="card dropdown" onclick="toggle(this)">
+      <div class="brand">
+        <img src="https://cdn.simpleicons.org/samsung/ffffff"> Samsung
+      </div>
+      <span>+</span>
+    </div>
+    <div class="dropdown-content">
+      <div class="card">Galaxy A → 1jt - 5jt</div>
+      <div class="card">Galaxy S → 6jt - 20jt</div>
+    </div>
+
+    <!-- IPHONE -->
+    <div class="card dropdown" onclick="toggle(this)">
+      <div class="brand">
+        <img src="https://cdn.simpleicons.org/apple/ffffff"> iPhone
+      </div>
+      <span>+</span>
+    </div>
+    <div class="dropdown-content">
+      <div class="card">iPhone 11 → 3jt - 5jt</div>
+      <div class="card">iPhone 12 → 5jt - 7jt</div>
+    </div>
+
+    <!-- XIAOMI -->
+    <div class="card dropdown" onclick="toggle(this)">
+      <div class="brand">
+        <img src="https://cdn.simpleicons.org/xiaomi/ffffff"> Xiaomi
+      </div>
+      <span>+</span>
+    </div>
+    <div class="dropdown-content">
+      <div class="card">Redmi → 1jt - 5jt</div>
+      <div class="card">Mi Series → 3jt - 10jt</div>
+    </div>
+
+    <!-- VIVO -->
+    <div class="card dropdown" onclick="toggle(this)">
+      <div class="brand">
+        <img src="https://cdn.simpleicons.org/vivo/ffffff"> Vivo
+      </div>
+      <span>+</span>
+    </div>
+    <div class="dropdown-content">
+      <div class="card">Y Series → 1jt - 4jt</div>
+      <div class="card">V Series → 3jt - 8jt</div>
+    </div>
+
+    <!-- NOTE -->
+    <p style="text-align:center;font-size:13px;margin-top:10px;">
+      Unit lainnya bisa ditanyakan langsung via WhatsApp
+    </p>
+
   </div>
 
   <!-- FOOTER -->
@@ -180,7 +240,7 @@
 
 </div>
 
-<!-- FLOATING ICON -->
+<!-- FLOATING WA -->
 <div class="floating" onclick="wa()">
   <i class="fa-brands fa-whatsapp"></i>
 </div>
@@ -192,6 +252,14 @@ function wa(){
 
 function ig(){
   window.location.href="https://instagram.com/hpdia";
+}
+
+function toggle(el){
+  let content = el.nextElementSibling;
+  let icon = el.querySelector("span");
+
+  content.classList.toggle("open");
+  icon.innerHTML = content.classList.contains("open") ? "-" : "+";
 }
 </script>
 

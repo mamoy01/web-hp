@@ -73,7 +73,7 @@
     }
 
     .section {
-      margin-top: 50px;
+      margin-top: 60px;
       text-align: left;
     }
 
@@ -89,11 +89,13 @@
       padding: 15px;
       border-radius: 12px;
       margin-bottom: 10px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
     }
 
     .dropdown {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       cursor: pointer;
     }
 
@@ -101,11 +103,14 @@
       display: none;
     }
 
-    .hero-img {
-      width: 100px;
-      margin: 20px auto;
-      display: block;
-      opacity: 0.9;
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand img {
+      filter: grayscale(100%) brightness(200%);
     }
 
     .footer {
@@ -139,8 +144,6 @@
   <h1>Jual HP Anda dengan Cepat & Aman</h1>
   <p class="sub">Harga kompetitif • Proses instan • Bisa COD</p>
 
-  <img src="https://cdn-icons-png.flaticon.com/512/15/15874.png" class="hero-img">
-
   <button class="btn wa" onclick="wa()">
     <i class="fa-brands fa-whatsapp"></i> Jual HP Sekarang
   </button>
@@ -149,32 +152,50 @@
     <i class="fa-brands fa-instagram"></i> @hpdia
   </button>
 
-  <!-- ESTIMASI HARGA -->
+  <!-- ESTIMASI -->
   <div class="section">
     <div class="title">Estimasi Harga</div>
 
+    <!-- OPPO -->
     <div class="card dropdown" onclick="toggle(this)">
-      OPPO <span>+</span>
+      <div class="brand">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/OPPO_LOGO_2019.png" width="60">
+        OPPO
+      </div>
+      <span>+</span>
     </div>
     <div class="dropdown-content">
       <div class="card">Reno → 4jt - 9jt</div>
       <div class="card">A Series → 1jt - 4jt</div>
+      <div class="card">⚡ Bisa langsung cair</div>
     </div>
 
+    <!-- SAMSUNG -->
     <div class="card dropdown" onclick="toggle(this)">
-      Samsung <span>+</span>
+      <div class="brand">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg" width="70">
+        Samsung
+      </div>
+      <span>+</span>
     </div>
     <div class="dropdown-content">
       <div class="card">Galaxy A → 1jt - 5jt</div>
       <div class="card">Galaxy S → 6jt - 20jt</div>
+      <div class="card">💰 Harga kompetitif</div>
     </div>
 
+    <!-- IPHONE -->
     <div class="card dropdown" onclick="toggle(this)">
-      iPhone <span>+</span>
+      <div class="brand">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" width="25">
+        iPhone
+      </div>
+      <span>+</span>
     </div>
     <div class="dropdown-content">
       <div class="card">iPhone 11 → 3jt - 5jt</div>
       <div class="card">iPhone 12 → 5jt - 7jt</div>
+      <div class="card">🚗 Bisa COD / jemput unit</div>
     </div>
 
     <p style="text-align:center; font-size:13px; margin-top:10px;">
@@ -183,7 +204,6 @@
 
   </div>
 
-  <!-- FOOTER -->
   <div class="footer">
     <p><i class="fa-brands fa-whatsapp"></i> 083805811175</p>
     <p><i class="fa-brands fa-instagram"></i> @hpdia</p>

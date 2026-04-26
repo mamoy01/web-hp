@@ -21,12 +21,12 @@
     .container {
       max-width: 520px;
       margin: auto;
-      padding: 25px;
+      padding: 30px 25px;
       text-align: center;
     }
 
     .logo {
-      font-size: 22px;
+      font-size: 24px;
       font-weight: 600;
       color: #4ade80;
     }
@@ -34,33 +34,27 @@
     .tagline {
       font-size: 13px;
       color: #cbd5f5;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
 
     h1 {
-      font-size: 30px;
+      font-size: 28px;
       margin-bottom: 10px;
     }
 
     .sub {
       color: #e2e8f0;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
 
     .btn {
-      padding: 14px;
+      padding: 15px;
       border-radius: 12px;
       font-size: 15px;
       cursor: pointer;
       width: 100%;
-      margin-top: 10px;
+      margin-top: 12px;
       border: none;
-      font-weight: 500;
-      transition: 0.2s;
-    }
-
-    .btn:hover {
-      opacity: 0.9;
     }
 
     .wa {
@@ -79,64 +73,46 @@
     }
 
     .section {
-      margin-top: 60px;
-    }
-
-    .card {
-      background: rgba(255,255,255,0.08);
-      padding: 16px;
-      border-radius: 15px;
-      margin-bottom: 12px;
-      backdrop-filter: blur(10px);
+      margin-top: 50px;
       text-align: left;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.25);
     }
 
     .title {
       text-align: center;
       margin-bottom: 20px;
-      font-size: 19px;
+      font-size: 18px;
       font-weight: 600;
     }
 
-    .highlight {
-      background: rgba(34,197,94,0.2);
-      border: 1px solid rgba(34,197,94,0.5);
+    .card {
+      background: rgba(255,255,255,0.08);
+      padding: 15px;
+      border-radius: 12px;
+      margin-bottom: 10px;
+    }
+
+    .dropdown {
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+
+    .dropdown-content {
+      display: none;
     }
 
     .hero-img {
-      width: 100%;
-      max-width: 260px;
+      width: 100px;
       margin: 20px auto;
       display: block;
-    }
-
-    .trust {
-      display: flex;
-      justify-content: space-around;
-      margin-top: 20px;
-      font-size: 14px;
-    }
-
-    .trust div {
-      text-align: center;
+      opacity: 0.9;
     }
 
     .footer {
       margin-top: 60px;
-      padding: 20px;
-      border-top: 1px solid rgba(255,255,255,0.2);
+      text-align: center;
       font-size: 14px;
       color: #cbd5f5;
-    }
-
-    .contact {
-      margin-top: 8px;
-    }
-
-    .contact i {
-      margin-right: 6px;
-      color: #4ade80;
     }
 
     .floating-wa {
@@ -145,10 +121,8 @@
       right: 20px;
       background: #25D366;
       color: white;
-      border-radius: 50px;
-      padding: 12px 16px;
-      font-size: 14px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      border-radius: 50%;
+      padding: 14px;
       cursor: pointer;
     }
 
@@ -159,13 +133,11 @@
 
 <div class="container">
 
-  <!-- BRAND -->
   <div class="logo">HPDIA</div>
   <div class="tagline">Spesialis Jual Beli HP Bekas • Jabodetabek</div>
 
-  <!-- HERO -->
-  <h1>Jual HP Anda dengan Cepat, Aman, dan Tanpa Ribet</h1>
-  <p class="sub">Proses instan • Harga kompetitif • Bisa COD</p>
+  <h1>Jual HP Anda dengan Cepat & Aman</h1>
+  <p class="sub">Harga kompetitif • Proses instan • Bisa COD</p>
 
   <img src="https://cdn-icons-png.flaticon.com/512/15/15874.png" class="hero-img">
 
@@ -174,69 +146,54 @@
   </button>
 
   <button class="btn ig" onclick="ig()">
-    <i class="fa-brands fa-instagram"></i> Lihat Testimoni
+    <i class="fa-brands fa-instagram"></i> @hpdia
   </button>
 
-  <!-- TRUST ANGKA -->
-  <div class="trust">
-    <div><b>500+</b><br>Transaksi</div>
-    <div><b>Jabodetabek</b><br>Area</div>
-    <div><b>Fast</b><br>Process</div>
-  </div>
-
-  <!-- TRUST -->
-  <div class="section">
-    <div class="title">Kenapa HPDIA?</div>
-    <div class="card highlight">⚡ Proses cepat (cair hari itu)</div>
-    <div class="card">💰 Harga kompetitif & nego santai</div>
-    <div class="card">🚗 Layanan penjemputan unit tersedia untuk kemudahan Anda</div>
-    <div class="card">🔒 Aman & terpercaya</div>
-  </div>
-
-  <!-- CARA KERJA -->
-  <div class="section">
-    <div class="title">Cara Kerja</div>
-    <div class="card">1. Kirim data HP via WhatsApp</div>
-    <div class="card">2. Dapat estimasi harga</div>
-    <div class="card">3. Transaksi cepat (COD / transfer)</div>
-  </div>
-
-  <!-- PRICE -->
+  <!-- ESTIMASI HARGA -->
   <div class="section">
     <div class="title">Estimasi Harga</div>
-    <div class="card">iPhone 11 → 3jt - 5jt</div>
-    <div class="card">iPhone 12 → 5jt - 7jt</div>
-    <div class="card">Samsung → 2jt - 6jt</div>
-  </div>
 
-  <!-- CTA -->
-  <div class="section">
-    <div class="title">Siap menjual HP Anda?</div>
-    <button class="btn wa" onclick="wa()">
-      <i class="fa-brands fa-whatsapp"></i> Mulai Sekarang
-    </button>
+    <div class="card dropdown" onclick="toggle(this)">
+      OPPO <span>+</span>
+    </div>
+    <div class="dropdown-content">
+      <div class="card">Reno → 4jt - 9jt</div>
+      <div class="card">A Series → 1jt - 4jt</div>
+    </div>
+
+    <div class="card dropdown" onclick="toggle(this)">
+      Samsung <span>+</span>
+    </div>
+    <div class="dropdown-content">
+      <div class="card">Galaxy A → 1jt - 5jt</div>
+      <div class="card">Galaxy S → 6jt - 20jt</div>
+    </div>
+
+    <div class="card dropdown" onclick="toggle(this)">
+      iPhone <span>+</span>
+    </div>
+    <div class="dropdown-content">
+      <div class="card">iPhone 11 → 3jt - 5jt</div>
+      <div class="card">iPhone 12 → 5jt - 7jt</div>
+    </div>
+
+    <p style="text-align:center; font-size:13px; margin-top:10px;">
+      Unit lainnya bisa ditanyakan langsung via WhatsApp
+    </p>
+
   </div>
 
   <!-- FOOTER -->
   <div class="footer">
-    <b>Kontak Kami</b>
-
-    <div class="contact">
-      <i class="fa-brands fa-whatsapp"></i> 0838-0581-1175
-    </div>
-
-    <div class="contact">
-      <i class="fa-brands fa-instagram"></i> @hpdia
-    </div>
-
-    <div class="contact">📍 Jabodetabek</div>
+    <p><i class="fa-brands fa-whatsapp"></i> 083805811175</p>
+    <p><i class="fa-brands fa-instagram"></i> @hpdia</p>
+    <p>📍 Jabodetabek</p>
   </div>
 
 </div>
 
-<!-- FLOATING BUTTON -->
 <div class="floating-wa" onclick="wa()">
-  <i class="fa-brands fa-whatsapp"></i> Chat
+  <i class="fa-brands fa-whatsapp"></i>
 </div>
 
 <script>
@@ -246,6 +203,19 @@ function wa() {
 
 function ig() {
   window.location.href = "https://instagram.com/hpdia";
+}
+
+function toggle(el) {
+  let content = el.nextElementSibling;
+  let icon = el.querySelector("span");
+
+  if (content.style.display === "block") {
+    content.style.display = "none";
+    icon.innerHTML = "+";
+  } else {
+    content.style.display = "block";
+    icon.innerHTML = "-";
+  }
 }
 </script>
 

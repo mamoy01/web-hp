@@ -67,7 +67,6 @@
       margin: 10px auto;
       max-width: 300px;
     }
-
   </style>
 </head>
 <body>
@@ -106,7 +105,7 @@
 
 <script>
 function wa() {
-  window.open("https://wa.me/6283805811175", "_blank");
+  window.location.href = "https://wa.me/6283805811175";
 }
 
 function kirim() {
@@ -125,7 +124,7 @@ function kirim() {
 
   var url = "https://wa.me/6283805811175?text=" + encodeURIComponent(text);
 
-  window.open(url, "_blank");
+  window.location.href = url;
 }
 </script>
 

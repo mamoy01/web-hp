@@ -4,178 +4,134 @@
   <title>HPDIA - Trusted Phone Buyer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- FONT & ICON -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
-    :root{
-      --bg1:#0f172a;
-      --bg2:#1e3a8a;
-      --text:#ffffff;
-      --card:rgba(255,255,255,0.08);
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f172a, #1e3a8a);
+      color: white;
     }
 
-    body.light{
-      --bg1:#f8fafc;
-      --bg2:#e2e8f0;
-      --text:#111;
-      --card:#ffffff;
+    .container {
+      max-width: 520px;
+      margin: auto;
+      padding: 30px 20px;
+      text-align: center;
     }
 
-    body{
-      margin:0;
-      font-family:'Poppins',sans-serif;
-      background:linear-gradient(135deg,var(--bg1),var(--bg2));
-      color:var(--text);
-      transition:.3s;
+    .logo {
+      font-size: 26px;
+      font-weight: 600;
+      color: #4ade80;
     }
 
-    .container{
-      max-width:520px;
-      margin:auto;
-      padding:30px 20px;
-      text-align:center;
+    .tagline {
+      font-size: 13px;
+      margin-bottom: 20px;
+      opacity: 0.8;
     }
 
-    .logo{
-      font-size:26px;
-      font-weight:600;
-      color:#4ade80;
-      animation:fadeUp .6s;
+    h1 {
+      font-size: 28px;
+      margin: 10px 0;
     }
 
-    .tagline{
-      font-size:13px;
-      margin-bottom:20px;
-      opacity:.8;
-      animation:fadeUp .8s;
+    .sub {
+      margin-bottom: 25px;
+      opacity: 0.9;
     }
 
-    h1{
-      font-size:28px;
-      margin:10px 0;
-      animation:fadeUp 1s;
+    .btn {
+      padding: 14px;
+      border-radius: 12px;
+      width: 100%;
+      margin-top: 10px;
+      border: none;
+      cursor: pointer;
+      font-size: 15px;
     }
 
-    .sub{
-      margin-bottom:25px;
-      opacity:.9;
-      animation:fadeUp 1.2s;
+    .wa {
+      background: #25D366;
+      color: white;
     }
 
-    .btn{
-      padding:14px;
-      border-radius:12px;
-      width:100%;
-      margin-top:10px;
-      border:none;
-      cursor:pointer;
-      font-size:15px;
-      transition:.2s;
+    .ig {
+      background: rgba(255,255,255,0.1);
+      color: white;
     }
 
-    .btn:hover{transform:translateY(-2px)}
-
-    .wa{
-      background:#25D366;
-      color:white;
-      box-shadow:0 6px 20px rgba(37,211,102,.4);
+    .section {
+      margin-top: 60px;
+      text-align: left;
     }
 
-    .ig{
-      background:var(--card);
-      color:var(--text);
+    .title {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 20px;
+      font-weight: 600;
     }
 
-    .section{
-      margin-top:60px;
-      text-align:left;
-      animation:fadeUp 1.5s;
+    .card {
+      background: rgba(255,255,255,0.08);
+      padding: 15px;
+      border-radius: 14px;
+      margin-bottom: 10px;
     }
 
-    .title{
-      text-align:center;
-      margin-bottom:20px;
-      font-size:20px;
-      font-weight:600;
+    .dropdown {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
     }
 
-    .card{
-      background:var(--card);
-      padding:15px;
-      border-radius:14px;
-      margin-bottom:10px;
-      backdrop-filter:blur(10px);
-      box-shadow:0 6px 20px rgba(0,0,0,.25);
-      transition:.2s;
+    .dropdown-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: 0.3s;
     }
 
-    .card:hover{transform:translateY(-3px)}
-
-    .dropdown{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      cursor:pointer;
+    .dropdown-content.open {
+      max-height: 300px;
     }
 
-    .dropdown-content{
-      max-height:0;
-      overflow:hidden;
-      transition:.3s;
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
-    .dropdown-content.open{
-      max-height:300px;
+    .brand img {
+      width: 26px;
+      filter: brightness(0) invert(1);
     }
 
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:10px;
+    .footer {
+      margin-top: 60px;
+      text-align: center;
+      font-size: 13px;
+      opacity: 0.8;
     }
 
-    .brand img{
-      width:26px;
-      filter:brightness(0) invert(1);
+    .floating {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      padding: 14px;
+      border-radius: 50%;
+      cursor: pointer;
     }
 
-    body.light .brand img{
-      filter:brightness(0);
-    }
-
-    .toggle-mode{
-      position:fixed;
-      top:20px;
-      right:20px;
-      background:var(--card);
-      padding:10px;
-      border-radius:50%;
-      cursor:pointer;
-    }
-
-    .floating{
-      position:fixed;
-      bottom:20px;
-      right:20px;
-      background:#25D366;
-      padding:14px;
-      border-radius:50%;
-      cursor:pointer;
-    }
-
-    @keyframes fadeUp{
-      from{opacity:0;transform:translateY(20px)}
-      to{opacity:1;transform:translateY(0)}
-    }
   </style>
 </head>
 
 <body>
-
-<!-- DARK / LIGHT -->
-<div class="toggle-mode" onclick="toggleMode()">🌗</div>
 
 <div class="container">
 
@@ -193,54 +149,60 @@
     <i class="fa-brands fa-instagram"></i> @hpdia
   </button>
 
+  <!-- KENAPA -->
+  <div class="section">
+    <div class="title">Kenapa HPDIA?</div>
+    <div class="card">⚡ Proses cepat (cair hari itu)</div>
+    <div class="card">💰 Harga kompetitif & nego santai</div>
+    <div class="card">🚗 Penjemputan unit tersedia</div>
+    <div class="card">🔒 Aman & terpercaya</div>
+  </div>
+
   <!-- ESTIMASI -->
   <div class="section">
     <div class="title">Estimasi Harga</div>
 
-    <div class="card dropdown" onclick="toggle(this)">
-      <div class="brand">
-        <img src="https://cdn.simpleicons.org/oppo/ffffff"> OPPO
-      </div>
-      <span>+</span>
-    </div>
-    <div class="dropdown-content">
-      <div class="card">Reno → 4jt - 9jt</div>
-      <div class="card">A Series → 1jt - 4jt</div>
-      <div class="card">⚡ Bisa langsung cair</div>
-    </div>
+    <!-- LIST BRAND -->
+    <script>
+      const brands = [
+        {name:"OPPO",logo:"oppo"},
+        {name:"Samsung",logo:"samsung"},
+        {name:"iPhone",logo:"apple"},
+        {name:"Xiaomi",logo:"xiaomi"},
+        {name:"Vivo",logo:"vivo"},
+        {name:"iQOO",logo:"iqoo"},
+        {name:"Infinix",logo:"infinix"}
+      ];
 
-    <div class="card dropdown" onclick="toggle(this)">
-      <div class="brand">
-        <img src="https://cdn.simpleicons.org/samsung/ffffff"> Samsung
-      </div>
-      <span>+</span>
-    </div>
-    <div class="dropdown-content">
-      <div class="card">Galaxy A → 1jt - 5jt</div>
-      <div class="card">Galaxy S → 6jt - 20jt</div>
-      <div class="card">💰 Harga kompetitif</div>
-    </div>
-
-    <div class="card dropdown" onclick="toggle(this)">
-      <div class="brand">
-        <img src="https://cdn.simpleicons.org/apple/ffffff"> iPhone
-      </div>
-      <span>+</span>
-    </div>
-    <div class="dropdown-content">
-      <div class="card">iPhone 11 → 3jt - 5jt</div>
-      <div class="card">iPhone 12 → 5jt - 7jt</div>
-      <div class="card">🚗 Bisa COD / jemput</div>
-    </div>
+      document.write(brands.map(b => `
+        <div class="card dropdown" onclick="toggle(this)">
+          <div class="brand">
+            <img src="https://cdn.simpleicons.org/${b.logo}/ffffff">
+            ${b.name}
+          </div>
+          <span>+</span>
+        </div>
+        <div class="dropdown-content">
+          <div class="card">Estimasi 1jt - 10jt+</div>
+          <div class="card">⚡ Bisa langsung cair</div>
+        </div>
+      `).join(""));
+    </script>
 
     <p style="text-align:center;font-size:13px;margin-top:10px;">
       Unit lainnya bisa ditanyakan via WhatsApp
     </p>
   </div>
 
+  <!-- FOOTER -->
+  <div class="footer">
+    <p><i class="fa-brands fa-whatsapp"></i> 083805811175</p>
+    <p><i class="fa-brands fa-instagram"></i> @hpdia</p>
+    <p>📍 Jabodetabek</p>
+  </div>
+
 </div>
 
-<!-- FLOATING WA -->
 <div class="floating" onclick="wa()">
   <i class="fa-brands fa-whatsapp"></i>
 </div>
@@ -260,10 +222,6 @@ function toggle(el){
 
   content.classList.toggle("open");
   icon.innerHTML=content.classList.contains("open")?"-":"+";
-}
-
-function toggleMode(){
-  document.body.classList.toggle("light");
 }
 </script>
 

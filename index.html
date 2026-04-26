@@ -1,35 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Jual HP ke Gua</title>
+  <title>HPDIA - Jual Beli HP</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     body {
       margin: 0;
       font-family: Arial;
-      background: linear-gradient(180deg, #0f0f0f, #1c1c1c);
+      background: linear-gradient(180deg, #0f172a, #1e293b);
       color: white;
     }
 
     .container {
-      padding: 25px;
+      padding: 20px;
       text-align: center;
     }
 
     h1 {
       font-size: 28px;
-      margin-bottom: 10px;
     }
 
     .sub {
-      color: #bbb;
-      font-size: 14px;
+      color: #cbd5f5;
       margin-bottom: 20px;
     }
 
     .btn {
-      background: #25D366;
+      background: #22c55e;
       padding: 15px;
       border: none;
       border-radius: 12px;
@@ -39,18 +37,16 @@
       width: 100%;
       max-width: 320px;
       margin-top: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
     }
 
     .card {
-      background: #1f1f1f;
+      background: #1e293b;
       padding: 20px;
       border-radius: 15px;
       margin-top: 25px;
       max-width: 400px;
       margin-left: auto;
       margin-right: auto;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.5);
     }
 
     input, textarea {
@@ -59,27 +55,22 @@
       margin: 8px 0;
       border-radius: 10px;
       border: none;
-      background: #2a2a2a;
+      background: #334155;
       color: white;
     }
 
-    input::placeholder, textarea::placeholder {
-      color: #888;
-    }
-
-    .section {
-      margin-top: 35px;
-    }
-
-    .box {
-      background: #1f1f1f;
+    .price-box {
+      background: #1e293b;
       padding: 15px;
       border-radius: 12px;
       margin: 10px auto;
       max-width: 320px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+      text-align: left;
     }
 
+    .section {
+      margin-top: 40px;
+    }
   </style>
 </head>
 
@@ -87,36 +78,39 @@
 
 <div class="container">
 
-  <h1>Jual HP Bekas Lu ke Gua 🔥</h1>
-  <p class="sub">Proses cepat • Harga santai • Bisa COD</p>
+  <h1>HPDIA 🔥</h1>
+  <p class="sub">Beli & Terima Jual HP Bekas</p>
 
-  <button class="btn" onclick="wa()">💬 Chat WhatsApp Sekarang</button>
+  <button class="btn" onclick="wa()">💬 Chat WhatsApp</button>
 
+  <!-- PRICE LIST -->
+  <div class="section">
+    <h3>💰 Estimasi Harga Beli</h3>
+
+    <div class="price-box">iPhone 11 → 3jt - 5jt</div>
+    <div class="price-box">iPhone 12 → 5jt - 7jt</div>
+    <div class="price-box">Samsung S21 → 4jt - 6jt</div>
+    <div class="price-box">Xiaomi → 1jt - 3jt</div>
+
+  </div>
+
+  <!-- FORM -->
   <div class="card">
-    <h3>Isi Data HP</h3>
+    <h3>Jual HP ke Gua</h3>
     <input id="nama" placeholder="Nama">
-    <input id="hp" placeholder="Tipe HP (contoh: iPhone 11)">
-    <input id="kondisi" placeholder="Kondisi (mulus / minus)">
+    <input id="hp" placeholder="Tipe HP">
+    <input id="kondisi" placeholder="Kondisi">
     <input id="harga" placeholder="Harga diinginkan">
-    <textarea id="ket" placeholder="Keterangan tambahan"></textarea>
+    <textarea id="ket" placeholder="Keterangan"></textarea>
     <button class="btn" onclick="kirim()">🚀 Kirim ke WhatsApp</button>
   </div>
 
+  <!-- KELEBIHAN -->
   <div class="section">
-    <h3>Kenapa jual ke gua?</h3>
-
-    <div class="box">⚡ Proses cepat (bisa cair hari itu)</div>
-    <div class="box">💰 Harga nego santai</div>
-    <div class="box">🔒 Aman & terpercaya</div>
-
-  </div>
-
-  <div class="section">
-    <h3>Testimoni</h3>
-
-    <div class="box">"Cepet banget prosesnya!"</div>
-    <div class="box">"Langsung cair, recommended!"</div>
-
+    <h3>Kenapa pilih HPDIA?</h3>
+    <p>⚡ Proses cepat</p>
+    <p>💰 Harga nego santai</p>
+    <p>🔒 Aman & terpercaya</p>
   </div>
 
 </div>
@@ -133,12 +127,7 @@ function kirim() {
   var harga = document.getElementById("harga").value;
   var ket = document.getElementById("ket").value;
 
-  var text = "Halo, saya mau jual HP - " +
-             nama + " | " +
-             hp + " | " +
-             kondisi + " | " +
-             harga + " | " +
-             ket;
+  var text = "Jual HP - " + nama + " | " + hp + " | " + kondisi + " | " + harga + " | " + ket;
 
   var link = "https://api.whatsapp.com/send?phone=6283805811175&text=" + encodeURIComponent(text);
 

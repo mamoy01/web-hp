@@ -41,7 +41,7 @@
 
     .sub {
       margin-bottom: 25px;
-      opacity: 0.9;
+      line-height: 1.6;
     }
 
     .btn {
@@ -54,9 +54,15 @@
       font-size: 15px;
     }
 
+    /* WA CLEAN STYLE */
     .wa {
-      background: #25D366;
+      background: rgba(255,255,255,0.1);
       color: white;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .wa i {
+      color: #25D366;
     }
 
     .ig {
@@ -118,14 +124,17 @@
       opacity: 0.8;
     }
 
+    /* FLOATING ICON ONLY */
     .floating {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background: #25D366;
+      background: white;
+      color: #25D366;
       padding: 14px;
       border-radius: 50%;
       cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     }
 
   </style>
@@ -139,8 +148,12 @@
   <div class="tagline">Spesialis Jual Beli HP Bekas • Jabodetabek</div>
 
   <h1>Jual HP Anda dengan Cepat & Aman</h1>
-  <p class="sub">Harga kompetitif • Proses instan • Bisa COD</p>
 
+  <p class="sub">
+  Solusi cepat dan aman untuk menjual HP Anda dengan harga kompetitif dan proses tanpa ribet
+  </p>
+
+  <!-- WA BUTTON CLEAN -->
   <button class="btn wa" onclick="wa()">
     <i class="fa-brands fa-whatsapp"></i> Jual HP Sekarang
   </button>
@@ -152,46 +165,10 @@
   <!-- KENAPA -->
   <div class="section">
     <div class="title">Kenapa HPDIA?</div>
-    <div class="card">⚡ Proses cepat (cair hari itu)</div>
-    <div class="card">💰 Harga kompetitif & nego santai</div>
-    <div class="card">🚗 Penjemputan unit tersedia</div>
-    <div class="card">🔒 Aman & terpercaya</div>
-  </div>
-
-  <!-- ESTIMASI -->
-  <div class="section">
-    <div class="title">Estimasi Harga</div>
-
-    <!-- LIST BRAND -->
-    <script>
-      const brands = [
-        {name:"OPPO",logo:"oppo"},
-        {name:"Samsung",logo:"samsung"},
-        {name:"iPhone",logo:"apple"},
-        {name:"Xiaomi",logo:"xiaomi"},
-        {name:"Vivo",logo:"vivo"},
-        {name:"iQOO",logo:"iqoo"},
-        {name:"Infinix",logo:"infinix"}
-      ];
-
-      document.write(brands.map(b => `
-        <div class="card dropdown" onclick="toggle(this)">
-          <div class="brand">
-            <img src="https://cdn.simpleicons.org/${b.logo}/ffffff">
-            ${b.name}
-          </div>
-          <span>+</span>
-        </div>
-        <div class="dropdown-content">
-          <div class="card">Estimasi 1jt - 10jt+</div>
-          <div class="card">⚡ Bisa langsung cair</div>
-        </div>
-      `).join(""));
-    </script>
-
-    <p style="text-align:center;font-size:13px;margin-top:10px;">
-      Unit lainnya bisa ditanyakan via WhatsApp
-    </p>
+    <div class="card">Proses cepat dan bisa cair di hari yang sama</div>
+    <div class="card">Harga kompetitif dan masih bisa nego</div>
+    <div class="card">Transaksi aman dan bisa COD</div>
+    <div class="card">Tersedia layanan penjemputan unit</div>
   </div>
 
   <!-- FOOTER -->
@@ -203,6 +180,7 @@
 
 </div>
 
+<!-- FLOATING ICON -->
 <div class="floating" onclick="wa()">
   <i class="fa-brands fa-whatsapp"></i>
 </div>
@@ -214,14 +192,6 @@ function wa(){
 
 function ig(){
   window.location.href="https://instagram.com/hpdia";
-}
-
-function toggle(el){
-  let content=el.nextElementSibling;
-  let icon=el.querySelector("span");
-
-  content.classList.toggle("open");
-  icon.innerHTML=content.classList.contains("open")?"-":"+";
 }
 </script>
 

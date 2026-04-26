@@ -3,71 +3,122 @@
 <head>
   <title>Jual HP ke Gua</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     body {
       margin: 0;
       font-family: Arial;
-      background: #0f0f0f;
+      background: linear-gradient(180deg, #0f0f0f, #1c1c1c);
       color: white;
+    }
+
+    .container {
+      padding: 25px;
       text-align: center;
-      padding: 30px;
     }
 
     h1 {
-      font-size: 26px;
+      font-size: 28px;
+      margin-bottom: 10px;
     }
 
-    p {
-      color: #aaa;
+    .sub {
+      color: #bbb;
+      font-size: 14px;
+      margin-bottom: 20px;
     }
 
     .btn {
       background: #25D366;
       padding: 15px;
       border: none;
-      border-radius: 10px;
+      border-radius: 12px;
       color: white;
       font-size: 16px;
       cursor: pointer;
+      width: 100%;
+      max-width: 320px;
       margin-top: 10px;
-      width: 90%;
-      max-width: 300px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
     }
 
     .card {
-      background: #1a1a1a;
+      background: #1f1f1f;
       padding: 20px;
       border-radius: 15px;
-      margin-top: 30px;
+      margin-top: 25px;
       max-width: 400px;
       margin-left: auto;
       margin-right: auto;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.5);
     }
 
     input, textarea {
-      width: 90%;
-      padding: 10px;
-      margin: 8px;
-      border-radius: 8px;
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 10px;
       border: none;
+      background: #2a2a2a;
+      color: white;
     }
+
+    input::placeholder, textarea::placeholder {
+      color: #888;
+    }
+
+    .section {
+      margin-top: 35px;
+    }
+
+    .box {
+      background: #1f1f1f;
+      padding: 15px;
+      border-radius: 12px;
+      margin: 10px auto;
+      max-width: 320px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    }
+
   </style>
 </head>
+
 <body>
 
-<h1>Jual HP Bekas Lu ke Gua 🔥</h1>
-<p>Proses cepat • Harga santai • Bisa COD</p>
+<div class="container">
 
-<button class="btn" onclick="wa()">Chat WhatsApp</button>
+  <h1>Jual HP Bekas Lu ke Gua 🔥</h1>
+  <p class="sub">Proses cepat • Harga santai • Bisa COD</p>
 
-<div class="card">
-  <h3>Isi Data HP</h3>
-  <input id="nama" placeholder="Nama">
-  <input id="hp" placeholder="Tipe HP">
-  <input id="kondisi" placeholder="Kondisi">
-  <input id="harga" placeholder="Harga">
-  <textarea id="ket" placeholder="Keterangan"></textarea>
-  <button class="btn" onclick="kirim()">Kirim ke WhatsApp</button>
+  <button class="btn" onclick="wa()">💬 Chat WhatsApp Sekarang</button>
+
+  <div class="card">
+    <h3>Isi Data HP</h3>
+    <input id="nama" placeholder="Nama">
+    <input id="hp" placeholder="Tipe HP (contoh: iPhone 11)">
+    <input id="kondisi" placeholder="Kondisi (mulus / minus)">
+    <input id="harga" placeholder="Harga diinginkan">
+    <textarea id="ket" placeholder="Keterangan tambahan"></textarea>
+    <button class="btn" onclick="kirim()">🚀 Kirim ke WhatsApp</button>
+  </div>
+
+  <div class="section">
+    <h3>Kenapa jual ke gua?</h3>
+
+    <div class="box">⚡ Proses cepat (bisa cair hari itu)</div>
+    <div class="box">💰 Harga nego santai</div>
+    <div class="box">🔒 Aman & terpercaya</div>
+
+  </div>
+
+  <div class="section">
+    <h3>Testimoni</h3>
+
+    <div class="box">"Cepet banget prosesnya!"</div>
+    <div class="box">"Langsung cair, recommended!"</div>
+
+  </div>
+
 </div>
 
 <script>

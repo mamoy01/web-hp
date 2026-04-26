@@ -4,12 +4,15 @@
   <title>HPDIA - Trusted Phone Buyer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
-      font-family: Arial;
-      background: #0f172a;
-      color: white;
+      font-family: 'Poppins', sans-serif;
+      background: #ffffff;
+      color: #111;
     }
 
     .container {
@@ -21,13 +24,13 @@
 
     .logo {
       font-size: 20px;
-      font-weight: bold;
+      font-weight: 600;
       color: #22c55e;
     }
 
     .tagline {
       font-size: 12px;
-      color: #94a3b8;
+      color: #777;
       margin-bottom: 20px;
     }
 
@@ -37,22 +40,30 @@
     }
 
     .sub {
-      color: #cbd5f5;
+      color: #555;
       margin-bottom: 20px;
     }
 
     .btn {
       padding: 14px;
-      border: none;
       border-radius: 10px;
       font-size: 15px;
       cursor: pointer;
       width: 100%;
       margin-top: 10px;
+      border: none;
     }
 
-    .wa { background: #22c55e; }
-    .ig { background: #e1306c; }
+    .wa {
+      background: #22c55e;
+      color: white;
+    }
+
+    .ig {
+      background: #f1f1f1;
+      color: #111;
+      border: 1px solid #ddd;
+    }
 
     .section {
       margin-top: 40px;
@@ -63,13 +74,15 @@
       text-align: center;
       margin-bottom: 15px;
       font-size: 18px;
+      font-weight: 600;
     }
 
     .card {
-      background: #1e293b;
+      background: #f9f9f9;
       padding: 15px;
       border-radius: 10px;
       margin-bottom: 10px;
+      border: 1px solid #eee;
     }
 
   </style>
@@ -88,12 +101,12 @@
   <p class="sub">Proses instan • Harga kompetitif • Bisa COD</p>
 
   <button class="btn wa" onclick="wa()">💬 Jual HP Sekarang</button>
-  <button class="btn ig" onclick="ig()">📲 Lihat Testimoni Instagram</button>
+  <button class="btn ig" onclick="ig()">📲 Lihat Instagram</button>
 
   <!-- CARA KERJA -->
   <div class="section">
     <div class="title">Cara Kerja</div>
-    <div class="card">1. Kirim data HP</div>
+    <div class="card">1. Kirim data HP Anda</div>
     <div class="card">2. Dapat estimasi harga</div>
     <div class="card">3. Transaksi cepat</div>
   </div>

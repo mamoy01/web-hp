@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jual HP ke Gua</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: #0f0f0f;
+      color: white;
+    }
+
+    .container {
+      padding: 30px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 28px;
+    }
+
+    .sub {
+      color: #aaa;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      background: #25D366;
+      padding: 15px;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .card {
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 15px;
+      margin-top: 30px;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 8px;
+      border: none;
+    }
+
+    .section {
+      margin-top: 40px;
+    }
+
+    .testi {
+      background: #1a1a1a;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 10px auto;
+      max-width: 300px;
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <h1>Jual HP Bekas Lu ke Gua 🔥</h1>
+  <p class="sub">Proses cepat • Harga bersaing • Bisa COD</p>
+
+  <button class="btn" onclick="wa()">Chat WhatsApp Sekarang</button>
+
+  <div class="card">
+    <h3>Isi Data HP</h3>
+    <input id="nama" placeholder="Nama">
+    <input id="hp" placeholder="Tipe HP">
+    <input id="kondisi" placeholder="Kondisi">
+    <input id="harga" placeholder="Harga diinginkan">
+    <textarea id="ket" placeholder="Keterangan tambahan"></textarea>
+    <button class="btn" onclick="kirim()">Kirim ke WhatsApp</button>
+  </div>
+
+  <div class="section">
+    <h3>Kenapa jual ke gua?</h3>
+    <p>✔ Proses cepat (bisa cair hari itu)</p>
+    <p>✔ Harga nego santai</p>
+    <p>✔ Aman & terpercaya</p>
+  </div>
+
+  <div class="section">
+    <h3>Testimoni</h3>
+    <div class="testi">"Cepet banget prosesnya!"</div>
+    <div class="testi">"Langsung cair, recommended!"</div>
+  </div>
+
+</div>
+
+<script>
+function wa() {
+  window.location.href = "https://wa.me/6283805811175";
+}
+
+function kirim() {
+  var nama = document.getElementById("nama").value;
+  var hp = document.getElementById("hp").value;
+  var kondisi = document.getElementById("kondisi").value;
+  var harga = document.getElementById("harga").value;
+  var ket = document.getElementById("ket").value;
+
+  var text = `Halo, saya mau jual HP:%0A
+Nama: ${nama}%0A
+Tipe: ${hp}%0A
+Kondisi: ${kondisi}%0A
+Harga: ${harga}%0A
+Keterangan: ${ket}`;
+
+  window.location.href = "https://wa.me/628XXXXXXXXXX?text=" + text;
+}
+</script>
+
+</body>
+</html>

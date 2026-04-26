@@ -7,6 +7,9 @@
   <!-- FONT -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
+  <!-- ICON -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
     body {
       margin: 0;
@@ -23,7 +26,7 @@
     }
 
     .logo {
-      font-size: 20px;
+      font-size: 22px;
       font-weight: 600;
       color: #22c55e;
     }
@@ -55,14 +58,18 @@
     }
 
     .wa {
-      background: #22c55e;
+      background: #25D366;
       color: white;
     }
 
     .ig {
-      background: #f1f1f1;
+      background: #f3f3f3;
       color: #111;
       border: 1px solid #ddd;
+    }
+
+    .btn i {
+      margin-right: 8px;
     }
 
     .section {
@@ -85,6 +92,23 @@
       border: 1px solid #eee;
     }
 
+    .footer {
+      margin-top: 50px;
+      padding: 20px;
+      border-top: 1px solid #eee;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .contact {
+      margin-top: 10px;
+    }
+
+    .contact i {
+      margin-right: 6px;
+      color: #22c55e;
+    }
+
   </style>
 </head>
 
@@ -100,15 +124,21 @@
   <h1>Jual HP Anda dengan Aman & Cepat</h1>
   <p class="sub">Proses instan • Harga kompetitif • Bisa COD</p>
 
-  <button class="btn wa" onclick="wa()">💬 Jual HP Sekarang</button>
-  <button class="btn ig" onclick="ig()">📲 Lihat Instagram</button>
+  <!-- BUTTON -->
+  <button class="btn wa" onclick="wa()">
+    <i class="fa-brands fa-whatsapp"></i> Jual HP Sekarang
+  </button>
+
+  <button class="btn ig" onclick="ig()">
+    <i class="fa-brands fa-instagram"></i> Lihat Testimoni Instagram
+  </button>
 
   <!-- CARA KERJA -->
   <div class="section">
     <div class="title">Cara Kerja</div>
     <div class="card">1. Kirim data HP Anda</div>
     <div class="card">2. Dapat estimasi harga</div>
-    <div class="card">3. Transaksi cepat</div>
+    <div class="card">3. Transaksi cepat (COD / transfer)</div>
   </div>
 
   <!-- PRICE -->
@@ -122,7 +152,24 @@
   <!-- CTA -->
   <div class="section" style="text-align:center;">
     <div class="title">Siap menjual HP Anda?</div>
-    <button class="btn wa" onclick="wa()">🚀 Mulai Sekarang</button>
+    <button class="btn wa" onclick="wa()">
+      <i class="fa-brands fa-whatsapp"></i> Mulai Sekarang
+    </button>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+
+    <div><b>Kontak Kami</b></div>
+
+    <div class="contact">
+      <i class="fa-brands fa-whatsapp"></i> 0838-0581-1175
+    </div>
+
+    <div class="contact">
+      <i class="fa-brands fa-instagram"></i> @hpdiaa
+    </div>
+
   </div>
 
 </div>
@@ -133,7 +180,7 @@ function wa() {
 }
 
 function ig() {
-  window.location.href = "https://instagram.com/USERNAME_LU";
+  window.location.href = "https://instagram.com/hpdiaa";
 }
 </script>
 

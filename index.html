@@ -21,12 +21,12 @@
     .container {
       max-width: 520px;
       margin: auto;
-      padding: 30px 25px;
+      padding: 30px 20px;
       text-align: center;
     }
 
     .logo {
-      font-size: 24px;
+      font-size: 26px;
       font-weight: 600;
       color: #4ade80;
     }
@@ -34,7 +34,7 @@
     .tagline {
       font-size: 13px;
       color: #cbd5f5;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
     }
 
     h1 {
@@ -47,29 +47,31 @@
       margin-bottom: 25px;
     }
 
+    /* BUTTON */
     .btn {
-      padding: 15px;
+      padding: 14px;
       border-radius: 12px;
+      width: 100%;
+      margin-top: 10px;
+      border: none;
       font-size: 15px;
       cursor: pointer;
-      width: 100%;
-      margin-top: 12px;
-      border: none;
+      transition: 0.2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
     }
 
     .wa {
       background: #25D366;
       color: white;
+      box-shadow: 0 6px 20px rgba(37,211,102,0.4);
     }
 
     .ig {
       background: rgba(255,255,255,0.1);
       color: white;
-      border: 1px solid rgba(255,255,255,0.2);
-    }
-
-    .btn i {
-      margin-right: 8px;
     }
 
     .section {
@@ -80,18 +82,21 @@
     .title {
       text-align: center;
       margin-bottom: 20px;
-      font-size: 18px;
+      font-size: 20px;
       font-weight: 600;
     }
 
+    /* CARD */
     .card {
       background: rgba(255,255,255,0.08);
       padding: 15px;
-      border-radius: 12px;
+      border-radius: 14px;
       margin-bottom: 10px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.25);
     }
 
+    /* DROPDOWN */
     .dropdown {
       display: flex;
       justify-content: space-between;
@@ -99,10 +104,21 @@
       cursor: pointer;
     }
 
-    .dropdown-content {
-      display: none;
+    .dropdown:hover {
+      background: rgba(255,255,255,0.12);
     }
 
+    .dropdown-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .dropdown-content.open {
+      max-height: 300px;
+    }
+
+    /* BRAND */
     .brand {
       display: flex;
       align-items: center;
@@ -110,9 +126,11 @@
     }
 
     .brand img {
-      filter: grayscale(100%) brightness(200%);
+      width: 28px;
+      filter: brightness(0) invert(1); /* putih */
     }
 
+    /* FOOTER */
     .footer {
       margin-top: 60px;
       text-align: center;
@@ -120,14 +138,14 @@
       color: #cbd5f5;
     }
 
-    .floating-wa {
+    /* FLOATING */
+    .floating {
       position: fixed;
       bottom: 20px;
       right: 20px;
       background: #25D366;
-      color: white;
-      border-radius: 50%;
       padding: 14px;
+      border-radius: 50%;
       cursor: pointer;
     }
 
@@ -159,7 +177,7 @@
     <!-- OPPO -->
     <div class="card dropdown" onclick="toggle(this)">
       <div class="brand">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/OPPO_LOGO_2019.png" width="60">
+        <img src="https://cdn.simpleicons.org/oppo/ffffff">
         OPPO
       </div>
       <span>+</span>
@@ -173,7 +191,7 @@
     <!-- SAMSUNG -->
     <div class="card dropdown" onclick="toggle(this)">
       <div class="brand">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg" width="70">
+        <img src="https://cdn.simpleicons.org/samsung/ffffff">
         Samsung
       </div>
       <span>+</span>
@@ -184,10 +202,10 @@
       <div class="card">💰 Harga kompetitif</div>
     </div>
 
-    <!-- IPHONE -->
+    <!-- APPLE -->
     <div class="card dropdown" onclick="toggle(this)">
       <div class="brand">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" width="25">
+        <img src="https://cdn.simpleicons.org/apple/ffffff">
         iPhone
       </div>
       <span>+</span>
@@ -212,7 +230,7 @@
 
 </div>
 
-<div class="floating-wa" onclick="wa()">
+<div class="floating" onclick="wa()">
   <i class="fa-brands fa-whatsapp"></i>
 </div>
 
@@ -229,13 +247,8 @@ function toggle(el) {
   let content = el.nextElementSibling;
   let icon = el.querySelector("span");
 
-  if (content.style.display === "block") {
-    content.style.display = "none";
-    icon.innerHTML = "+";
-  } else {
-    content.style.display = "block";
-    icon.innerHTML = "-";
-  }
+  content.classList.toggle("open");
+  icon.innerHTML = content.classList.contains("open") ? "-" : "+";
 }
 </script>
 
